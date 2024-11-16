@@ -16,8 +16,7 @@ public class PositionGraphBuilder : MonoBehaviour
     public Vector3[] positions;
     public IGraph Graph { get; private set; }
 
-    private void Awake()
-    {
+    private void Awake() {
         //COMPLÉTEZ À PARTIR D'ICI
 
         //1. Créez la bonne sorte d'IGraph selon la valeur de `representation`
