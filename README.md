@@ -6,10 +6,10 @@ TP3 unity repo
 
 
 ### code
-- enemy
-- movethroughtpoints; update
-- PositionGraphBuilder; awake
-- PositionGraphBuilder; OnDrawGizmos
+- [x] PositionGraphBuilder; awake
+- [x] PositionGraphBuilder; OnDrawGizmos
+- [ ] enemy
+- [ ] movethroughtpoints; update
 
 # unity
 - ////
