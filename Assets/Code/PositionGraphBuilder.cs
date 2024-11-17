@@ -43,8 +43,6 @@ public class PositionGraphBuilder : MonoBehaviour {
                 //2. Affichez une ligne entre les noeuds connect�s par un lien
                 //   - Utilisez la m�thode `Gizmos.DrawLine(.)`
 
-                Gizmos.DrawLine(from, to); // TODO
-
                 //3. Affichez le co�t de chaque lien au centre de leur ligne
                 //   - Utilisez `Vector3.Lerp(a, b, t)`
                 //   - Utilisez `Handles.Label(position, texte, textStyle)
