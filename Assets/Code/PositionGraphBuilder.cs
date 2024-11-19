@@ -31,7 +31,7 @@ public class PositionGraphBuilder : MonoBehaviour {
                 //2. Ajoutez les liens ("edges") au IGraph
                 for (int i = 0;i < grid.Size;i++) {
                         for (int j = 0;j < grid.Size;j++) {
-                                if (grid[i, j] != -1) { // Only add edge if cost is valid (not -1)
+                                if (grid[i, j] != -1) {
                                         Graph.AddEdge(i, j, grid[i, j]);
                                 }
                         }

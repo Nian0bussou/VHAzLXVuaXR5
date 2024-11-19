@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour {
         MoveThroughPoints mvtp;
 
         private void Start() {
-                // Get path indices from A* search
                 var pathIndices = Pathfinding.GetPathAStar(graphBuilder.Graph, n1, n2,
                         (a, b) => {
                                 Vector3 posA = graphBuilder.positions[a];
@@ -23,13 +22,12 @@ public class Enemy : MonoBehaviour {
                                 return Vector3.Distance(posA, posB);
                         });
 
-                // Get positions for each node in the path
+                // get positions the path
                 Vector3[] pathPositions = new Vector3[pathIndices.Count];
                 for (int i = 0;i < pathIndices.Count;i++) {
                         pathPositions[i] = graphBuilder.positions[pathIndices[i]];
                 }
 
-                // Start moving through the positions
                 mvtp.StartMove(pathPositions);
         }
 }

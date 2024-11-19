@@ -21,22 +21,17 @@ public class MoveThroughPoints : MonoBehaviour {
 
                 //COMPL�TEZ � PARTIR D'ICI
 
-                // Get current start and end points based on path indices
                 Vector3 start = Points[PathIndices[CurrentPathIndex]];
                 Vector3 end = Points[PathIndices[CurrentPathIndex + 1]];
 
-                // Calculate distance between points
                 float distance = Vector3.Distance(start, end);
 
                 t += ( displacementPerSecond / distance ) * Time.deltaTime;
                 transform.position = Vector3.Lerp(start, end, t);
 
-                // If we've reached the end point
                 if (t >= 1f) {
                         t = 0f;
                         CurrentPathIndex++;
-
-                        // Stop moving if we've reached the last point
                         if (CurrentPathIndex >= PathIndices.Length - 1) {
                                 IsMoving = false;
                         }
