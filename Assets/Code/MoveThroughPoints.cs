@@ -11,16 +11,12 @@ public class MoveThroughPoints : MonoBehaviour {
         private float t { get; set; }
         private bool IsMoving { get; set; } = false;
 
-        private void Start() {
-                foreach (var r in Points) print(r);
-                foreach (var r in PathIndices) print(r);
-        }
-
         void Update() {
                 if (!IsMoving || PathIndices.Length < 2) return;
 
                 //COMPL�TEZ � PARTIR D'ICI
 
+                // ?? ????? ?? ?? ??? ?? ?? ?? ?? ? ?
                 Vector3 start = Points[PathIndices[CurrentPathIndex]];
                 Vector3 end = Points[PathIndices[CurrentPathIndex + 1]];
 
